@@ -1,0 +1,537 @@
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> (14) -> (15) -> (16) -> (17) -> (18) -> (19) -> (20) -> output]
+  (1): cudnn.SpatialConvolution(3 -> 32, 3x3, 2,2, 1,1) without bias
+  (2): nn.SpatialBatchNormalization (4D) (32)
+  (3): cudnn.ReLU
+  (4): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(32 -> 32, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (32)
+    (3): ChannelInterlace : #channel=32, #group=16, group size=2
+    (4): cudnn.SpatialConvolution(32 -> 64, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (64)
+    (6): cudnn.ReLU
+  }
+  (5): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(64 -> 64, 3x3, 2,2, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (64)
+    (3): ChannelInterlace : #channel=64, #group=32, group size=2
+    (4): cudnn.SpatialConvolution(64 -> 128, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (128)
+    (6): cudnn.ReLU
+  }
+  (6): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(128 -> 128, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (128)
+    (3): ChannelInterlace : #channel=128, #group=64, group size=2
+    (4): cudnn.SpatialConvolution(128 -> 128, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (128)
+    (6): cudnn.ReLU
+  }
+  (7): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(128 -> 128, 3x3, 2,2, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (128)
+    (3): ChannelInterlace : #channel=128, #group=64, group size=2
+    (4): cudnn.SpatialConvolution(128 -> 256, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (256)
+    (6): cudnn.ReLU
+  }
+  (8): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(256 -> 256, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (256)
+    (3): ChannelInterlace : #channel=256, #group=128, group size=2
+    (4): cudnn.SpatialConvolution(256 -> 256, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (256)
+    (6): cudnn.ReLU
+  }
+  (9): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(256 -> 256, 3x3, 2,2, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (256)
+    (3): ChannelInterlace : #channel=256, #group=128, group size=2
+    (4): cudnn.SpatialConvolution(256 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (10): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (11): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (12): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (13): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (14): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (15): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 2,2, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 1024, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (1024)
+    (6): cudnn.ReLU
+  }
+  (16): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(1024 -> 1024, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (1024)
+    (3): ChannelInterlace : #channel=1024, #group=512, group size=2
+    (4): cudnn.SpatialConvolution(1024 -> 1024, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (1024)
+    (6): cudnn.ReLU
+  }
+  (17): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(1024 -> 1024, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (1024)
+    (3): ChannelInterlace : #channel=1024, #group=512, group size=2
+    (4): cudnn.SpatialConvolution(1024 -> 1024, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (1024)
+    (6): cudnn.ReLU
+  }
+  (18): cudnn.SpatialAveragePooling(7x7, 1,1)
+  (19): nn.View(1024)
+  (20): nn.Linear(1024 -> 1000)
+}nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> (14) -> (15) -> (16) -> (17) -> (18) -> (19) -> (20) -> output]
+  (1): cudnn.SpatialConvolution(3 -> 32, 3x3, 2,2, 1,1) without bias
+  (2): nn.SpatialBatchNormalization (4D) (32)
+  (3): cudnn.ReLU
+  (4): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(32 -> 32, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (32)
+    (3): ChannelInterlace : #channel=32, #group=16, group size=2
+    (4): cudnn.SpatialConvolution(32 -> 64, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (64)
+    (6): cudnn.ReLU
+  }
+  (5): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(64 -> 64, 3x3, 2,2, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (64)
+    (3): ChannelInterlace : #channel=64, #group=32, group size=2
+    (4): cudnn.SpatialConvolution(64 -> 128, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (128)
+    (6): cudnn.ReLU
+  }
+  (6): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(128 -> 128, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (128)
+    (3): ChannelInterlace : #channel=128, #group=64, group size=2
+    (4): cudnn.SpatialConvolution(128 -> 128, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (128)
+    (6): cudnn.ReLU
+  }
+  (7): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(128 -> 128, 3x3, 2,2, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (128)
+    (3): ChannelInterlace : #channel=128, #group=64, group size=2
+    (4): cudnn.SpatialConvolution(128 -> 256, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (256)
+    (6): cudnn.ReLU
+  }
+  (8): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(256 -> 256, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (256)
+    (3): ChannelInterlace : #channel=256, #group=128, group size=2
+    (4): cudnn.SpatialConvolution(256 -> 256, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (256)
+    (6): cudnn.ReLU
+  }
+  (9): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(256 -> 256, 3x3, 2,2, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (256)
+    (3): ChannelInterlace : #channel=256, #group=128, group size=2
+    (4): cudnn.SpatialConvolution(256 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (10): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (11): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (12): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (13): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (14): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (15): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 2,2, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 1024, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (1024)
+    (6): cudnn.ReLU
+  }
+  (16): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(1024 -> 1024, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (1024)
+    (3): ChannelInterlace : #channel=1024, #group=512, group size=2
+    (4): cudnn.SpatialConvolution(1024 -> 1024, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (1024)
+    (6): cudnn.ReLU
+  }
+  (17): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(1024 -> 1024, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (1024)
+    (3): ChannelInterlace : #channel=1024, #group=512, group size=2
+    (4): cudnn.SpatialConvolution(1024 -> 1024, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (1024)
+    (6): cudnn.ReLU
+  }
+  (18): cudnn.SpatialAveragePooling(7x7, 1,1)
+  (19): nn.View(1024)
+  (20): nn.Linear(1024 -> 1000)
+}nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> (14) -> (15) -> (16) -> (17) -> (18) -> (19) -> (20) -> output]
+  (1): cudnn.SpatialConvolution(3 -> 32, 3x3, 2,2, 1,1) without bias
+  (2): nn.SpatialBatchNormalization (4D) (32)
+  (3): cudnn.ReLU
+  (4): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(32 -> 32, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (32)
+    (3): ChannelInterlace : #channel=32, #group=16, group size=2
+    (4): cudnn.SpatialConvolution(32 -> 64, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (64)
+    (6): cudnn.ReLU
+  }
+  (5): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(64 -> 64, 3x3, 2,2, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (64)
+    (3): ChannelInterlace : #channel=64, #group=32, group size=2
+    (4): cudnn.SpatialConvolution(64 -> 128, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (128)
+    (6): cudnn.ReLU
+  }
+  (6): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(128 -> 128, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (128)
+    (3): ChannelInterlace : #channel=128, #group=64, group size=2
+    (4): cudnn.SpatialConvolution(128 -> 128, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (128)
+    (6): cudnn.ReLU
+  }
+  (7): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(128 -> 128, 3x3, 2,2, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (128)
+    (3): ChannelInterlace : #channel=128, #group=64, group size=2
+    (4): cudnn.SpatialConvolution(128 -> 256, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (256)
+    (6): cudnn.ReLU
+  }
+  (8): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(256 -> 256, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (256)
+    (3): ChannelInterlace : #channel=256, #group=128, group size=2
+    (4): cudnn.SpatialConvolution(256 -> 256, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (256)
+    (6): cudnn.ReLU
+  }
+  (9): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(256 -> 256, 3x3, 2,2, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (256)
+    (3): ChannelInterlace : #channel=256, #group=128, group size=2
+    (4): cudnn.SpatialConvolution(256 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (10): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (11): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (12): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (13): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (14): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (15): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 2,2, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 1024, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (1024)
+    (6): cudnn.ReLU
+  }
+  (16): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(1024 -> 1024, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (1024)
+    (3): ChannelInterlace : #channel=1024, #group=512, group size=2
+    (4): cudnn.SpatialConvolution(1024 -> 1024, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (1024)
+    (6): cudnn.ReLU
+  }
+  (17): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(1024 -> 1024, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (1024)
+    (3): ChannelInterlace : #channel=1024, #group=512, group size=2
+    (4): cudnn.SpatialConvolution(1024 -> 1024, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (1024)
+    (6): cudnn.ReLU
+  }
+  (18): cudnn.SpatialAveragePooling(7x7, 1,1)
+  (19): nn.View(1024)
+  (20): nn.Linear(1024 -> 1000)
+}nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> (14) -> (15) -> (16) -> (17) -> (18) -> (19) -> (20) -> output]
+  (1): cudnn.SpatialConvolution(3 -> 32, 3x3, 2,2, 1,1) without bias
+  (2): nn.SpatialBatchNormalization (4D) (32)
+  (3): cudnn.ReLU
+  (4): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(32 -> 32, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (32)
+    (3): ChannelInterlace : #channel=32, #group=16, group size=2
+    (4): cudnn.SpatialConvolution(32 -> 64, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (64)
+    (6): cudnn.ReLU
+  }
+  (5): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(64 -> 64, 3x3, 2,2, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (64)
+    (3): ChannelInterlace : #channel=64, #group=32, group size=2
+    (4): cudnn.SpatialConvolution(64 -> 128, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (128)
+    (6): cudnn.ReLU
+  }
+  (6): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(128 -> 128, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (128)
+    (3): ChannelInterlace : #channel=128, #group=64, group size=2
+    (4): cudnn.SpatialConvolution(128 -> 128, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (128)
+    (6): cudnn.ReLU
+  }
+  (7): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(128 -> 128, 3x3, 2,2, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (128)
+    (3): ChannelInterlace : #channel=128, #group=64, group size=2
+    (4): cudnn.SpatialConvolution(128 -> 256, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (256)
+    (6): cudnn.ReLU
+  }
+  (8): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(256 -> 256, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (256)
+    (3): ChannelInterlace : #channel=256, #group=128, group size=2
+    (4): cudnn.SpatialConvolution(256 -> 256, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (256)
+    (6): cudnn.ReLU
+  }
+  (9): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(256 -> 256, 3x3, 2,2, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (256)
+    (3): ChannelInterlace : #channel=256, #group=128, group size=2
+    (4): cudnn.SpatialConvolution(256 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (10): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (11): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (12): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (13): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (14): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 512, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (512)
+    (6): cudnn.ReLU
+  }
+  (15): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(512 -> 512, 3x3, 2,2, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (512)
+    (3): ChannelInterlace : #channel=512, #group=256, group size=2
+    (4): cudnn.SpatialConvolution(512 -> 1024, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (1024)
+    (6): cudnn.ReLU
+  }
+  (16): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(1024 -> 1024, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (1024)
+    (3): ChannelInterlace : #channel=1024, #group=512, group size=2
+    (4): cudnn.SpatialConvolution(1024 -> 1024, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (1024)
+    (6): cudnn.ReLU
+  }
+  (17): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+    (1): cudnn.SpatialConvolution(1024 -> 1024, 3x3, 1,1, 1,1) without bias
+    (2): nn.SpatialBatchNormalization (4D) (1024)
+    (3): ChannelInterlace : #channel=1024, #group=512, group size=2
+    (4): cudnn.SpatialConvolution(1024 -> 1024, 1x1) without bias
+    (5): nn.SpatialBatchNormalization (4D) (1024)
+    (6): cudnn.ReLU
+  }
+  (18): cudnn.SpatialAveragePooling(7x7, 1,1)
+  (19): nn.View(1024)
+  (20): nn.Linear(1024 -> 1000)
+}
