@@ -1,4 +1,5 @@
 # Depthwise separable convolution usage
+The original code is at https://github.com/universecool/mobilenet
 
 
 1. First make sure you installed OpenCV
