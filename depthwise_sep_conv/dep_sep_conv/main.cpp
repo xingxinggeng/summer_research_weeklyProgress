@@ -1,5 +1,8 @@
 ﻿#include "convLayer.h"
 #include "readdata.h"
+#include <iostream>
+#include <fstream>
+using namespace std;
 
 int main()
 {
@@ -10,8 +13,8 @@ int main()
     string line, label;
     string filepath = "..\\date\\images\\";  //path of image data
 
-    ReadData * = new ReadData("..\\date\\images\\image1", 224, 224, 3);
-    float *inputPictureData = m_Readdata->ReadInput("..\\date\\images\\image1");
+    ReadData *m_Readdata= new ReadData("..\\date\\images\\image1.jpg", 224, 224, 3);
+    float *inputPictureData = m_Readdata->ReadInput("..\\date\\images\\image1.jpg");
 
     // ConvlayerDw = new ConvLayer(pcConvDwWname, nInputNum, nInputNum, nInputWidth, 3, 1, nStride, nInputNum);
     // ConvlayerSep = new ConvLayer(pcConvSepWname, nInputNum, nOutputNum, nInputWidth / nStride, 1, 0);
