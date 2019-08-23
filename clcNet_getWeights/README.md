@@ -11,4 +11,4 @@ The original code is at(https://github.com/dqzhang17/clcnet.torch).
 th loadData.lua
 ```
 
-### Please notice that there are two models clcNet-A and clcNet-B. In weights_A file, there is a model structure and lst and 20th layer weights that are converted from clcNet-A. Please check them to make sure that the formula is correct. Then in order to convert all weights, please modify loadData.lua accordingly!
+### Please notice that there are two models clcNet-A and clcNet-B. In weights_A file, there is a model structure and 1st and 20th layer weights that are converted from clcNet-A. Please check them to make sure that the formula is correct. Then in order to convert all weights, please modify loadData.lua accordingly!
